@@ -1,0 +1,389 @@
+/*=== Selector universal===*/
+:root{
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --gris-oscuro:#666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--gris-claro);
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+
+header{
+    background-color: var(--amarillo);
+    padding: 5%;
+}
+header div.top-header p{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 400;
+}
+/*=== Aquí se debe disponer el CSS para el div.top-header=== */
+
+header div.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+header div.logo,
+header .form{
+    position: relative;
+    width: 50%;
+}
+
+header .form{
+    text-align: end;
+}
+
+header div.logo{
+    /*  */
+}
+/*=== Aquí debemos colocar el CSS para el header .form===*/
+
+
+header nav{
+    display: none;
+    font-size: 12px;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+
+header ul li{
+    list-style-type: none;
+    padding: 5px 0;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: var(--gris-oscuro);
+    padding: 2px;
+    display: inline;
+    border-radius: 4px;
+}
+
+button{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: var(--gris-oscuro);
+    height: 100%;
+    /* display: inline; */
+}
+
+div.burger-menu{
+    text-align: center;
+}
+
+div.burger-menu i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+
+/*=== Aquí colocamos el CSS para div.last-visit , div.offers===*/
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: var(--gris-oscuro);
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main section article{
+    background-color: #fff;
+    margin: 10px 0px;
+    width: 100%;
+    transition: all .5s ease;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: var(--verde);
+}
+
+main section article i,
+.fa-truck{
+    border: 1px solid var(--verde);
+    padding: 10px;
+
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+footer .footer-services{
+    text-align: center;
+    background-color: white;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+footer .footer-services{
+    margin-bottom: 40px;
+}
+
+footer .footer-services p{
+    color: var(--gris-oscuro);
+}
+
+footer .footer-services i{
+    color: var(--celeste);
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+footer .copyright{
+    text-align: left;
+}
+
+/*=== Aquí debemos colocar el CSS para el main section article i===*/
+
+
+main section h3{
+    margin: 20px 0px;
+}
+
+/*=== APlicar CSS al article div.main-article ===*/
+div.main-article{
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+main section article:hover .fa-truck{
+    transition: all .5s ease;
+    transform: rotate(-90deg);
+}
+
+@media (min-width: 361px){
+    /*=== Hacer visible main section article .descripcion===*/
+    .description{
+        visibility: visible;
+    }
+    
+    /*=== colocar sombra al main section article===*/    
+    main section article{
+        width: 45%;
+    }
+
+    main section article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    
+    /* header nav{
+        display: flex;
+        justify-content: space-between;
+    } */
+    
+    div.burger-menu{
+        display: block;
+    }
+    
+    
+    /*=== Aplicar CSS al main section div.products===*/
+    
+    /*=== Aplicar CSS al main section div.products article===*/
+    
+    /*=== Aplicar CSS al .price, .discont===*/
+    
+}
+
+@media (min-width: 769px){
+    /* .description{
+        display: block
+    } */
+    
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    div.burger-menu{
+        display: none;
+    }
+    
+    header div.logo,
+    header .form{
+        width: 33%;
+    }
+
+    .price
+    .discount{
+        width: 50%;
+    }
+    
+    /*=== Aplicar CSS al ain section div.products article===*/ 
+    main section article{
+        width: 20%;
+        transition: all .5s ease;
+    }
+
+    main section article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section article:hover .description{
+        display: block;
+    }
+
+    .footer-services{
+        flex-direction: row !important;
+    }
+
+    .footer-services article:hover i{
+        transform: scale(1.5);
+        opacity: .5;
+    }
+
+    /* main section article:hover{ //a investigar
+        display: block;
+    } */
+
+
+    
+}
+
+/* registro.html */
+.last-visit {
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--celeste); /* Color de Mercado Libre */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: var(--azul); /* Color de Mercado Libre cuando se pasa el ratón */
+}
+
+
+.boton-enviar{
+    background-color: #39b54a;
+    width: 100px;
+    height: 20px;
+    border: none;
+}
+
+.boton-enviar:hover{
+    background-color: #0022AA;
+}
